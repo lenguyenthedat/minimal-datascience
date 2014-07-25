@@ -40,7 +40,7 @@ for classifier in classifiers:
 # RMSD / RMSE
 for classifier in classifiers:
     print classifier.__class__.__name__
-    print np.sum(sqrt(pow(test_df.LeagueIndex,2) - pow(classifier.predict(test_df[features]),2))) / float(len(test_df))
+    print np.sqrt(mean(pow(test_df.LeagueIndex - classifier.predict(test_df[features]),2)))
 
 # Crosstab / Contingency Table
 for classifier in classifiers:    
