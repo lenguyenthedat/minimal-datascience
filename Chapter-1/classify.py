@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 import time
 
 from sklearn.ensemble import ExtraTreesClassifier, RandomForestClassifier
@@ -40,7 +41,7 @@ for classifier in classifiers:
 # RMSD / RMSE
 for classifier in classifiers:
     print classifier.__class__.__name__
-    print np.sqrt(mean(pow(test_df.LeagueIndex - classifier.predict(test_df[features]),2)))
+    print np.sqrt(np.mean(pow(test_df.LeagueIndex - classifier.predict(test_df[features]),2)))
 
 # Crosstab / Contingency Table
 for classifier in classifiers:    
