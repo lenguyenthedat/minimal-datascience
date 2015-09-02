@@ -44,6 +44,12 @@ myNNClassifier = Classifier(
 myNNClassifier.fit(np.array(train[list(features)]), train[goal])
 
 # Evaluation
+predictions = myNNClassifier.predict(np.array(test[features]))
 print 'Accuracy Score:'
-print accuracy_score(test[goal].values,
-    myNNClassifier.predict(np.array(test[features])))
+print accuracy_score(test[goal].values,predictions)
+
+# Cross Tab
+print 'Contingency table:'
+print pd.crosstab(test[goal],
+    np.array([val for sublist in predictions for val in sublist]),
+    rownames=["Pred"], colnames=["Actual"])
