@@ -1,3 +1,7 @@
+Minimal data science blog series
+================================
+My goal for this minimal data science blog series is not only sharing, tutorializing, but also, making personal notes while learning and working as a Data Scientist. I’m looking forward to receiving any feedback from you.
+
 [![IMAGE ALT TEXT HERE](http://i.imgur.com/ImHqSlT.png)](https://xkcd.com/688)
 
 
